@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MWT</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
+  </head>
+  <body class="rgba-grey-light">
+
+    <!--Navbar-->
+    <%- include('../partials/startMenu'); -%>
+    <!--Navbar-->
+
+    <main class="container MainHeight mt-5" style="height: 82vh;">
+          <div class="row h-100">
+            <div class="col-md-12 h-100">
+              <div class="d-flex justify-content-center">
+                <div class="card">
+                    <div class="card-header text-center font-weight-bold">
+                        REGISTRATION
+                    </div>
+                    <!-- Card content -->
+                    <div class="card-body">
+                      <form class="mx-5" action="/controllers/register-controller" method="POST" name="form">
+                        <div class="md-form">
+                            <input type="email" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email*</label>
+                        </div>
+                        <div class="md-form">
+                            <input type="text" id="form-firstname" name="name" class="form-control">
+                            <label for="form-firstname">Your Name*</label>
+                          </div>
+                          <div class="md-form">
+                            <input type="password" id="form-password" name="password" class="form-control">
+                            <label for="form-password">Your Paswword*</label>
+                          </div>
+                          <div class="<%= alert_danger %>" role="alert">
+                            <h6 class="mb-0"><%= error %></h6>
+                          </div>
+                          <div class="d-flex justify-content-center">
+                            <input type="submit" name="submit" value="Registration" class="btn rgba-pink-light text-default">
+                          </div>
+                      </form>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+    <%- include('../partials/footer'); -%>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
+
+  </body>
+</html>

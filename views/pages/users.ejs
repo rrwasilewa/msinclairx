@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MWT</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
+  </head>
+  <body class="rgba-grey-light">
+
+    <!--Navbar-->
+    <%- include('../partials/adminMenu'); -%>
+    <!--Navbar-->
+
+    <main class="container-fluid mt-3">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2>All Users</h2>
+            </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+            <div class="table-responsive">
+                <table class="table table-bordered rgba-brown-light">
+                    <thead class="rgba-pink-light text-white font-weight-bold">
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                        <th scope="col">Created_at</th>
+                        <th scope="col">Updated_at</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody class="text-dark">
+                      <% for(var i=0; i<= UsersTable.length-1; i++) { %>
+                        <tr>
+                          <td><%= UsersTable[i].id %></td>
+                          <td><%= UsersTable[i].name %></td>
+                          <td><%= UsersTable[i].email %></td>
+                          <td><%= UsersTable[i].password.substring(0, 10) + "...." %></td>
+                          <td><%= UsersTable[i].created_at %></td>
+                          <td><%= UsersTable[i].updated_at %></td>
+                          <td><%= UsersTable[i].status %></td>
+                        </tr>
+                      <% } %>
+                    </tbody>
+                  </table>
+              </div>
+             </div>
+          </div>
+        </main>
+
+    <%- include('../partials/footer'); -%>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
+
+  </body>
+</html>

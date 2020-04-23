@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MWT</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/css/mdb.min.css" rel="stylesheet">
+  </head>
+  <body class="rgba-grey-light">
+
+    <!--Navbar-->
+    <%- include('../partials/startMenu'); -%>
+    <!--Navbar-->
+
+    <main class="container mt-3" style="height: 85.5vh;background-color:#e4c7c7d4;">
+      <div class="row h-100">
+        <div class="col-md-12 h-100 text-center">
+          <h1 class="preview-font-title my-5">Упътвания към курсов проект</h1>
+          <p style="font-size: 1.4em;">
+          <span class="font-weight-bold">1.</span> При избор на "Sign up" от менюто може да се регистрира нов потребител (няма изисквания към паролата и потребителското име)<br><br>
+          <span class="font-weight-bold">2.</span> При избор на "Login" може да се влезе като "потребител (USER)" или "администратор (ADMIN)" - по подразбиране са въведени входните данни на админа, за да може да имате достъп до администраторския панел (в него е реализиран CRUD)<br><br>
+          <span class="font-weight-bold">3.</span> При вход като регистриран "потребител" таблицата с продуктите може само да се разглежда (т.е. липсва функционалност). При избор на "Chat Room" се зарежда чат форма, която е реализирана с Web Socket. Може да пробвате да влезете като двама различни потребители от различни браузъри и да тествате размяната на съобщения<br><br>
+          <span class="font-weight-bold">4.</span> При вход като "администратор" таблицата с продукти може да се редактира - да се добави нов продукт (от бутона вдясно над формата), както и да се редактира/изтрие конкретен продукт. При редактиране на продукт, то след запазване на промяна промененият продукт остава най-отдолу в таблицата (като последно редактиран)<br><br>
+          <span class="font-weight-bold">5.</span> При "Logout" направените промени от администратор се запазват
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <%- include('../partials/footer'); -%>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.15.0/js/mdb.min.js"></script>
+
+  </body>
+</html>
